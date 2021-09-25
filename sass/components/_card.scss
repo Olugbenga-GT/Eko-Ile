@@ -1,0 +1,156 @@
+.card {
+      // Basic Card Functionality
+      perspective: 150rem;
+      -moz-perspective: 150rem;
+      position: relative;
+      height: 50rem;
+
+      &__side{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: 50rem;
+            width: 100%;
+            transition:  all  3s;
+            backface-visibility: hidden;
+            border-radius: 5px;
+            // To stop the image from overflowng out of its parent box
+            overflow: hidden;
+            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .2);
+
+            &-front{
+                  background-color:  $color-white;
+            }
+
+            &-back{
+                  background-color: purple;
+                  transform: rotateY(180deg); 
+
+                  &-1 {
+                        background-image: linear-gradient(to right bottom,  $left-edge-color,  $left-edge-color-light);
+                  }
+
+                  &-2 {
+                        background-image: linear-gradient(to right bottom,  $color-secondary-dark,  $color-secondary-light);
+                  }
+
+                  &-3 {
+                        background-image: linear-gradient(to right bottom,  $primary-color,  $primary-color);
+                  }
+            }
+      }
+   
+
+      &:hover &__side-front {
+            transform: rotateY(-180deg);
+      }
+
+      &:hover &__side-back{
+            transform: rotateY(0);
+      } 
+
+      // FRONT SIDE STYLING
+      &__picture {
+            background-size: cover;
+            height: 23rem;
+            background-blend-mode: screen;
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+            clip-path: polygon(0 0,  100% 0%, 100% 80%, 0% 100%);
+
+            &--1{
+                  background-image:  linear-gradient(to right bottom,  $color-tertiary-light,  $color-tertiary-dark), url(../images/fishing.jpg);}
+
+
+            &--2{
+                  background-image:  linear-gradient(to right bottom,  $color-secondary-light,  $color-secondary-dark), url(../images/hotel-2.jpg);
+            }
+            &--3{
+                  background-image:   linear-gradient(to right bottom,  $right-edge-color,  $primary-color), url(../images/race-course.jpg);
+            }
+      }
+
+      &__heading {
+       font-size: 2rem;     
+       font-weight: 400;
+       text-transform: uppercase;
+       color: $color-white ;
+       position: absolute;
+       top: 15rem;
+       right: 2rem;
+       text-align: right;
+       width: 70%;
+
+      }
+
+      &__heading-span{
+            padding: .6rem 1.7rem;
+            // box-decoration-break: clone;
+                  &-1{
+                   background-image: linear-gradient(to right bottom,  $left-edge-color, $left-edge-color-light);
+                  } 
+                  
+                  &-2{
+                        background-image: linear-gradient(to right bottom,  $color-secondary-light, $color-secondary-dark);
+                       } 
+
+                   &-3{
+                        background-image: linear-gradient(to right bottom, $primary-color , $primary-color);
+                       }     
+      }
+      &__details{
+            ul{
+                  list-style: none;
+                  width: 80%;
+                  margin:3rem auto;
+                  li{
+                  text-align:  center;
+                  font-size: 1.3rem;
+                  padding:1rem;
+                  }
+            }
+      }
+
+      &__details-1{
+            li{
+                  border-bottom:  .1px solid $left-edge-color
+            }
+      }
+
+      &__details-2{
+            li{
+                  border-bottom:  .1px solid $color-secondary-dark
+            }
+      }
+
+      &__details-3{
+            li{
+                  border-bottom:  .1px solid $primary-color
+            }
+      }
+
+      &__cta {
+            position: absolute;
+            top: 40%;
+            left: 25%;
+      }
+
+      &__price-box {
+            text-align: center;
+            margin-bottom: 8rem;
+            color: $color-white;
+
+      }
+
+      &__price-only {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+
+      }
+
+      &__price-value {
+            font-size: 6rem;
+            font-weight: 100;
+            
+      }
+}

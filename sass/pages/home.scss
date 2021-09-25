@@ -1,0 +1,61 @@
+.section-about{
+      background: $color-light-grey-1 ;
+      padding-top: 20rem ;
+      padding-bottom: 33rem;
+      margin-top: -30vh;
+}
+
+.section-features {
+      padding: 20rem 0;
+      margin-top: -9rem ;
+      background-image: linear-gradient(
+            to left top,
+              ($left-edge-color),
+              ($lagos-color)),
+               url('../images/hero.jpg') ;
+               background-size: cover;
+               transform: skewY(-8deg);
+
+               & > * {
+                     transform: skewY(7deg);
+               }
+}
+
+.section-tours {
+      background: $color-light-grey-1 ;
+      padding-top: 30rem ;
+      margin-top:-15rem ;
+      padding-bottom: 5rem;
+}
+
+.section-stories {
+      position: relative;
+      // padding: 5rem 0;
+      // background-color: $color-light-grey-1 ;
+}
+
+.section-book {
+      padding: 10rem 0;
+      background-image: linear-gradient(to right bottom,  $color-tertiary-dark, $color-tertiary-light );
+}
+
+.book {
+      background-image: linear-gradient(
+      105deg,      
+      rgba($color-white, .8) 0%,
+      rgba($color-white, .8) 55%,
+      transparent 50%),
+         url('../../images/bridgee.jpg') ;
+         background-size: cover;
+      //    background-repeat: no-repeat;
+         background-position: center center ;
+          
+      border-radius: 3px;
+      box-shadow: 0 1.5 3rem rgba(0, 0, 0 , .6);
+      height: 40rem;
+
+      &__form{
+            width: 50%;
+            padding : 6rem;
+      }
+}

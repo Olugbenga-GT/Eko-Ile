@@ -1,0 +1,32 @@
+.header {
+      height: 125vh;
+      background-image: linear-gradient(
+            to right bottom,
+              ($left-edge-color),
+              ($right-edge-color)),
+               url('../images/bridgee.jpg') ;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 80%, 0% 100%);
+      clip-path: polygon(0 1%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.lagos-logo{
+      position: absolute;
+      top: 50px;
+      left: 50px;
+}
+
+.logo{
+      height: 4.5rem;
+}
+
+.text-box {
+       position: absolute;
+       top: 55%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+}
+
