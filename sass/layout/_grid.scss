@@ -3,6 +3,15 @@
       margin: 0 auto;
       &:not(:last-child){
             margin-bottom: $vertical-gutter;
+            @include responsiveness(tab-port){
+                  margin-right: $vertical-gutter-small;
+            }
+      }
+
+      @include responsiveness(tab-port){
+            max-width: 70rem;
+            padding: 0 3rem; 
+            
       }
       @include clearFix;
 
@@ -12,6 +21,13 @@
 
             &:not(:last-child){
                   margin-right: $horizontal-gutter;
+                  @include responsiveness(tab-port){
+                       margin-bottom: $vertical-gutter-small;
+                       margin-right: 0;
+                  }
+            }
+            @include responsiveness(tab-port){
+                  width: 100% !important;  
             }
       }
 

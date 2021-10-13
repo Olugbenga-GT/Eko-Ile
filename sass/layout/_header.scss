@@ -8,9 +8,17 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 80%, 0% 100%);
-      clip-path: polygon(0 1%, 100% 0%, 100% 80%, 0% 100%);
+      -webkit-clip-path:polygon(0 0, 100% 0%, 100% 88%, 0% 100%);
+     clip-path: polygon(0 0, 100% 0%, 100% 88%, 0% 100%);
+
+     @include responsiveness(tab-port) {
+      height: 75vh;
+      -webkit-clip-path:polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+      }
+      margin-bottom: 10rem;
 }
+
 
 .lagos-logo{
       position: absolute;
@@ -28,5 +36,8 @@
        left: 50%;
        transform: translate(-50%, -50%);
        text-align: center;
+       @include responsiveness(tab-port){
+             top: 40%;
+       }
 }
 

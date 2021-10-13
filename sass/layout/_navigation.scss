@@ -8,24 +8,43 @@
               height:7rem ;
               width: 7rem;
               position: fixed;
-              top: 6rem;
+              top: 5rem;
               right: 6rem;
               border-radius: 50%;
               z-index: 5;
               box-shadow: 0 1rem 2rem black;
               text-align: center;
               cursor: pointer;
+
+              @include responsiveness(tab-port){
+                     top: 4rem;
+                     right: 4rem;
+              }
+
+              @include responsiveness(phone){
+                     top: 3rem;
+                     right: 3rem;
+              }
        }
        &__background{
               height: 6rem;
               width: 6rem;
               border-radius: 50%;
               position: fixed;
-              top: 6.5rem;
+              top: 5.5rem;
               right: 6.5rem;
               background-image: radial-gradient( $color-tertiary-light, $color-tertiary-dark);
               z-index: 3;
               transition: all 1s ease-in-out;
+
+              @include responsiveness(tab-port){
+                     top: 4.5rem;
+                     right: 4.5rem;
+              }
+              @include responsiveness(phone){
+                     top: 3.5rem;
+                     right: 3.5rem;
+              }
        }
        &__nav{
               height: 100vh;

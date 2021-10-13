@@ -3,14 +3,23 @@
        padding: 2rem 0;
        font-size: 1.5rem;
 
+       @include responsiveness(tab-port){
+              padding: 2rem ;
+       }
+
        &__lagos-logo{
               text-align: center;
               margin-bottom: 5rem;
+              @include responsiveness(tab-port){
+                     margin-bottom: 2rem;
+              }
+       
        }
 
        &__logo{
               width: 15rem;
               height: auto;
+
        }
 
        &__link{

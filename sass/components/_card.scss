@@ -151,6 +151,59 @@
       &__price-value {
             font-size: 6rem;
             font-weight: 100;
-            
+      }
+
+      @include responsiveness(tab-port) {
+
+       // Basic Card Functionality;
+            height: auto;
+
+            &__side{
+                  position: relative;
+                  border-radius: 5px;
+                  height: auto;
+
+                  &-back{
+                        transform: rotateY(0); 
+
+                        &-1 {
+                              background-image: linear-gradient(to right bottom,  $left-edge-color,  $left-edge-color-light);
+                        }
+
+                        &-2 {
+                              background-image: linear-gradient(to right bottom,  $color-secondary-dark,  $color-secondary-light);
+                        }
+
+                        &-3 {
+                              background-image: linear-gradient(to right bottom,  $primary-color,  $primary-color);
+                        }
+                  }
+            }
+      
+
+            &:hover &__side-front {
+                  transform: rotateY(0);
+            }
+
+            &__cta {
+                  position: relative;
+                  top: 0;
+                  left: 0%;
+                  transform: translateX(0  );
+                  width: 100%;
+                  padding: 4rem;
+                  text-align: center;
+            }
+
+            &__price-only {
+                  font-size: 1.4rem;
+                  text-transform: uppercase;
+            }
+
+            &__price-value {
+                  font-size: 6rem;
+                  font-weight: 100;
+            }
+
       }
 }

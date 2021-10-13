@@ -1,7 +1,28 @@
-*{
+*,
+*::after , 
+*::before{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+}
+
+html {
+      font-size: 62.5%;
+
+      // @include phone-responsivenes{
+      //       font-size : 50%;
+      // }
+
+     
+      @include responsiveness(tab-port){
+            font-size: 50%;
+      }
+      @include responsiveness(tab-land){
+            font-size: 56.25%;
+      }
+      @include responsiveness(big-desktop){
+            font-size: 75%;
+      }
 }
 
 body {
@@ -10,4 +31,9 @@ body {
       font-size: 1rem;
       color: $color-dark-grey;
       padding: 1.8rem;
-}
+
+      @include responsiveness(tab-port){
+            padding: 0;
+      }
+} 
+
